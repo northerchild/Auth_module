@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 /*Rutas*/
 import { APP_ROUTING } from './app.routes';
 
+/*Servicios*/
+import {AuthService}  from './services/auth.service';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
@@ -22,7 +25,7 @@ import { ProtegidaComponent } from './components/protegida/protegida.component';
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
